@@ -16,6 +16,51 @@ Or you can check the versions of the Doctrine components:
 ```php
 print_r(Doctrine_Fuel::version_check());
 ```
+## Installation:
+
+```
+cd fuel/packages;
+git clone https://github.com/livedata/fuel-doctrine2.git doctrine2
+cp -R doctrine2/config/* ../app/config
+```
+NOTE: conf.yml file will be copied here, but it's HARDCODED, it will not be readed from app/config/ directory!
+
+Add 'doctrine2' package into always_load / packages section in app/config/config.php
+
+```
+    'always_load'  => array(
+
+        'packages'  => array(
+            'orm',
+            'auth',
+            'doctrine2'
+        ),
+```
+
+Configure your db connection, and lets try to run a simple test with this entity:
+
+```
+<?php // fuel/app/classes/entity/Card.php
+
+/**
+ * @Entity @Table(name="test_fuel_doctrine")
+ */
+class Card
+{
+    /**
+     * @Id @Column(type="integer")
+     * @GeneratedValue
+     */
+    private $id;
+
+    /** @Column(type="integer", nullable=false) */
+    private $test;
+}
+
+```
+
+Now you can run: oil refine doctrine orm:schema-tool:create
+Or with 'dry run': oil refine doctrine orm:schema-tool:create --dump-sql
 
 ## Versions:
 
