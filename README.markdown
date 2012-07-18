@@ -18,6 +18,8 @@ print_r(Doctrine_Fuel::version_check());
 ```
 ## Installation:
 
+NOTE: all vendor libraries required to use this package are already attached!
+
 ```
 cd fuel/packages;
 git clone https://github.com/livedata/fuel-doctrine2.git doctrine2
@@ -61,6 +63,15 @@ class Card
 
 Now you can run: oil refine doctrine orm:schema-tool:create
 Or with 'dry run': oil refine doctrine orm:schema-tool:create --dump-sql
+
+## Migrations
+
+This package provides another oil task, try:
+```
+oil refine doctrine:migrate
+```
+
+Documentation about DBAL migrations can be found here: http://docs.doctrine-project.org/projects/doctrine-migrations/en/latest/toc.html
 
 ## Versions:
 
