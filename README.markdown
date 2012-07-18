@@ -61,8 +61,14 @@ class Card
 
 ```
 
-Now you can run: oil refine doctrine orm:schema-tool:create
-Or with 'dry run': oil refine doctrine orm:schema-tool:create --dump-sql
+Now you can run:
+```
+oil refine doctrine orm:schema-tool:create
+```
+Or with 'dry run':
+```
+oil refine doctrine orm:schema-tool:create --dump-sql
+```
 
 ## Migrations
 
