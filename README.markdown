@@ -22,7 +22,7 @@ NOTE: all vendor libraries required to use this package are already attached!
 
 ```
 cd fuel/packages;
-git clone https://github.com/livedata/fuel-doctrine2.git doctrine2
+git clone https://github.com/krzysztofantczak/fuel-doctrine2.git doctrine2
 cp -R doctrine2/config/* ../app/config
 ```
 NOTE: conf.yml file will be copied here, but it's HARDCODED, it will not be readed from app/config/ directory!
